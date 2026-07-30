@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #252525;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0px 50px;
+}
+
+#header > img {
+    display: block;
+    width: 100px;
+}
+
+#header > h1 {
+    font-family: Bebas Neue, sans-serif;
+    font-size: 7em;
+    margin: 0;
+    opacity: 0.2;
+}
+
+#gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0px, 1fr));
+    gap: 30px;
+    padding: 0px 30px;
+}
+
+#gridcontainer > a {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    border: solid 2px white;
+}
+
+#gridcontainer > a > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8em;
+}
+
+footer > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+
+@media all and (max-width: 1023px){
+    #gridcontainer {
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
+    footer {
+        position: static;
+        padding: 50px 20px;
+    }
+}
+
+@media all and (max-width: 599px){
+    #header {
+        flex-direction: column;
+    }
+    #header > h1 {
+        font-size: 5em;
+    }
+    #gridcontainer {
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+}
